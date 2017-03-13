@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> Likurgas gallery
+</title>
+<script
+  src="http://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+
+<style>
+
+
+.zoom-box img {
+  max-width: 23rem;
+  position: absolute;
+  left: 0;
+  top: 10rem;
+}
+  
+</style>
+</head>
+<body>
+<script>
+  
+$(function(){
+    $('.zoom-box img:gt(0)').hide();
+    setInterval(function(){
+      $('.zoom-box :first-child').fadeOut()
+         .next('img').fadeIn()
+         .end().appendTo('.zoom-box');}, 
+      1000);
+  
+});
+
+
+  
+</script>  
+
+
+
+<h1> This is  some jQuery for Likurgas website </h1>
+<div class="zoom-box">
+    <img src="a.jpg" alt="" class="active" />
+    <img src="b.jpg" alt="" />
+    <img src="c.jpg" alt="" />
+</div>
+</body>
+</html>
+
+
